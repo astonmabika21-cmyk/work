@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OptiNet Security | CCTV Solutions</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f8fafc;
+    color:#1f2937;
+    line-height:1.6;
+}
+
+/* Navigation */
+nav{
+    position:sticky;
+    top:0;
+    background:#ffffff;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    z-index:1000;
+}
+
+.logo{
+    font-size:1.6rem;
+    font-weight:700;
+    color:#0f4c81;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#0f4c81;
+}
+
+/* Hero */
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:60px 8%;
+    background:linear-gradient(
+        rgba(255,255,255,0.92),
+        rgba(255,255,255,0.92)
+    ),
+    url("https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1600&q=80");
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.hero h1{
+    font-size:4rem;
+    line-height:1.1;
+    color:#111827;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    color:#4b5563;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 32px;
+    background:#0f4c81;
+    color:#fff;
+    text-decoration:none;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#08375e;
+}
+
+/* Sections */
+section{
+    padding:80px 8%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:2.3rem;
+    margin-bottom:20px;
+    color:#111827;
+}
+
+.section-text{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+    color:#4b5563;
+}
+
+/* About */
+.about{
+    background:#fff;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-top:40px;
+}
+
+.feature{
+    background:#f9fbfd;
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+    border:1px solid #e5e7eb;
+}
+
+.feature h3{
+    color:#0f4c81;
+    margin-bottom:10px;
+}
+
+/* Gallery */
+.gallery{
+    background:#f3f6f9;
+}
+
+.gallery-grid{
+    margin-top:50px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card h3{
+    margin-bottom:10px;
+    color:#0f4c81;
+}
+
+.card p{
+    color:#555;
+}
+
+/* Contact */
+.contact{
+    background:#fff;
+}
+
+.contact-container{
+    max-width:700px;
+    margin:auto;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    margin-top:30px;
+}
+
+input,
+textarea{
+    padding:15px;
+    border:1px solid #d1d5db;
+    border-radius:8px;
+    font-size:1rem;
+}
+
+textarea{
+    min-height:150px;
+    resize:vertical;
+}
+
+button{
+    background:#0f4c81;
+    color:white;
+    border:none;
+    padding:15px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:1rem;
+}
+
+button:hover{
+    background:#08375e;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:25px;
+    background:#0f4c81;
+    color:#fff;
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:2.5rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+    <div class="logo">OptiNet Security</div>
+
+    <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#gallery">Products</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Protect What Matters Most</h1>
+        <p>
+            Modern CCTV surveillance solutions for homes, offices,
+            retail stores, and businesses. Reliable security,
+            crystal-clear monitoring, and peace of mind.
+        </p>
+
+        <a href="#contact" class="btn">Get a Free Quote</a>
+    </div>
+</section>
+
+<!-- About -->
+<section id="about" class="about">
+
+    <h2 class="section-title">About Us</h2>
+
+    <p class="section-text">
+        OptiNet Security specializes in professional CCTV installation,
+        surveillance systems, remote monitoring, and security solutions
+        designed to keep your property safe. Our mission is to provide
+        dependable security technology with expert support and modern
+        installation standards.
+    </p>
+
+    <div class="features">
+
+        <div class="feature">
+            <h3>HD Surveillance</h3>
+            <p>High-definition video monitoring with clear image quality.</p>
+        </div>
+
+        <div class="feature">
+            <h3>Remote Access</h3>
+            <p>View your cameras anytime from your smartphone or computer.</p>
+        </div>
+
+        <div class="feature">
+            <h3>Motion Detection</h3>
+            <p>Instant alerts whenever suspicious movement is detected.</p>
+        </div>
+
+        <div class="feature">
+            <h3>Professional Setup</h3>
+            <p>Reliable installation and configuration by experienced technicians.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Gallery -->
+<section id="gallery" class="gallery">
+
+    <h2 class="section-title">CCTV Camera Solutions</h2>
+
+    <p class="section-text">
+        We supply and install a variety of CCTV systems suitable for
+        residential and commercial environments.
+    </p>
+
+    <div class="gallery-grid">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=800&q=80" alt="">
+            <div class="card-content">
+                <h3>2 Channel CCTV System</h3>
+                <p>
+                    Ideal for small homes, entrances, and compact office spaces.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" alt="">
+            <div class="card-content">
+                <h3>4 Channel CCTV System</h3>
+                <p>
+                    Popular solution for homes and small businesses requiring
+                    multiple camera coverage.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80" alt="">
+            <div class="card-content">
+                <h3>8 Channel CCTV System</h3>
+                <p>
+                    Advanced surveillance coverage for larger properties and offices.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=800&q=80" alt="">
+            <div class="card-content">
+                <h3>Spy Cameras</h3>
+                <p>
+                    Discreet monitoring solutions designed for specialized security needs.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact">
+
+    <div class="contact-container">
+
+        <h2 class="section-title">Contact Us</h2>
+
+        <p class="section-text">
+            Need a CCTV system installation or security consultation?
+            Send us a message and we'll get back to you.
+        </p>
+
+        <form>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="tel" placeholder="Phone Number">
+            <textarea placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2026 OptiNet Security. All Rights Reserved.
+</footer>
+
+</body>
+</html>
